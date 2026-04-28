@@ -230,6 +230,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .work-rail {
   display: flex;
+  align-items: flex-start;
   gap: clamp(20px, 3vw, 36px);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -249,7 +250,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .work-rail::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 .card {
-  flex: 0 0 min(420px, 86vw);
+  flex: 0 0 min(380px, 86vw);
   scroll-snap-align: start;
   display: grid;
   grid-template-rows: auto auto;
@@ -259,6 +260,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   overflow: hidden;
   transition: transform 500ms var(--ease), border-color 500ms var(--ease), box-shadow 500ms var(--ease);
   box-shadow: var(--shadow-md);
+}
+/* Horizontal cards — wider than tall, image-top at native landscape aspect */
+.card--horizontal {
+  flex: 0 0 min(580px, 92vw);
 }
 .card:hover {
   transform: translateY(-4px);
@@ -273,20 +278,29 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
 }
-/* Radr card: portrait phone-screen cover crops to headline + phone top */
+/* Horizontal cards use a wider 16:9 frame so landscape source images fit cleanly */
+.card--horizontal .card-media { aspect-ratio: 16 / 9; }
+
+/* Radr card: portrait phone-screen, anchor top to keep headline in frame */
 .card-media--portrait {
-  aspect-ratio: 9 / 13;
+  aspect-ratio: 4 / 5;
   background: #eaf3ff;
 }
 .card-media--portrait img {
   object-fit: cover;
-  object-position: 50% 18%;
+  object-position: 50% 0%;
 }
 
-/* D1 card: full-page screenshot — anchor crop to top so the hero shows */
+/* D1 card: full-page screenshot — anchor to top so the hero shows */
 .card-media--top img {
   object-fit: cover;
   object-position: top center;
+}
+
+/* Procarthy card: anchor left so "Get Started" stays in frame */
+.card-media--left img {
+  object-fit: cover;
+  object-position: 18% center;
 }
 .card-media a, .card-media > img {
   display: block;
