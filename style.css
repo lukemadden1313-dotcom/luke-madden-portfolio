@@ -273,6 +273,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
 }
+.card-media--portrait {
+  aspect-ratio: 4 / 5;
+  background: #eaf0ff;
+}
 .card-media a, .card-media > img {
   display: block;
   width: 100%;
