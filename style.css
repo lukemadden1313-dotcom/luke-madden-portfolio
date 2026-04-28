@@ -274,9 +274,28 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-bottom: 1px solid var(--line-soft);
 }
 .card-media--portrait {
-  aspect-ratio: 4 / 5;
-  background: #eaf0ff;
+  aspect-ratio: 9 / 14;
+  background: linear-gradient(180deg, #5fbfff 0%, #2da6ff 100%);
 }
+.card-media--portrait > a,
+.card-media--portrait > img,
+.card-media--portrait a img {
+  object-fit: contain !important;
+  background: transparent;
+}
+
+/* D1 card: image fills tighter — locked at the hover scale */
+.card-media--zoom {
+  background: #fff;
+}
+.card-media--zoom img {
+  object-fit: cover;
+  object-position: top center;
+  transform: scale(1.06);
+  transform-origin: top center;
+  transition: transform 700ms var(--ease);
+}
+.card:hover .card-media--zoom img { transform: scale(1.06); }
 .card-media a, .card-media > img {
   display: block;
   width: 100%;
