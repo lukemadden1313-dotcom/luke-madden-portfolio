@@ -10,7 +10,7 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -62,114 +62,128 @@
   <div class="section-head">
     <span class="section-num">01</span>
     <h2 class="section-title">Selected work</h2>
-    <p class="section-sub">Five things I've shipped — websites, an iOS app, an AI agent, and a brand pitch deck. Most were built end-to-end with Claude Code.</p>
+    <p class="section-sub">Five things I've shipped — websites, an iOS app, an AI agent, and a brand pitch. Most were built end-to-end with Claude Code. <span class="hint">Scroll →</span></p>
   </div>
 
-  <article class="project" data-tilt>
-    <div class="project-media">
-      <a href="https://getradr.app" target="_blank" rel="noopener">
-        <img src="assets/radr.png" alt="Radr — the social calendar for workouts" loading="lazy" />
-      </a>
-    </div>
-    <div class="project-meta">
-      <div class="project-tags">
-        <span class="tag tag-accent">iOS App</span>
-        <span class="tag">Marketing site</span>
-        <span class="tag">Claude Code</span>
+  <div class="work-rail" id="rail" aria-label="Selected work, scrollable">
+    <article class="card" data-card="1">
+      <div class="card-media">
+        <a href="https://getradr.app" target="_blank" rel="noopener" aria-label="Open Radr site">
+          <img src="assets/radr.png" alt="Radr iOS app — the social calendar for workouts" loading="lazy" />
+        </a>
       </div>
-      <h3 class="project-title">Radr</h3>
-      <p class="project-desc">
-        The social calendar for workouts — see what your friends are training, share your schedule, and show up together. Native iOS app on the App Store, plus the marketing site and shareable workout/profile preview pages. Built entirely solo through vibecoding with Claude Code: SwiftUI front end, Supabase backend, Universal Links, push notifications, AASA file, the whole stack.
-      </p>
-      <div class="project-links">
-        <a href="https://getradr.app" target="_blank" rel="noopener" class="link-arrow">getradr.app</a>
-        <a href="https://apps.apple.com/us/app/radr-calendar/id6758311100" target="_blank" rel="noopener" class="link-arrow">App Store</a>
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-accent">iOS App</span>
+          <span class="tag">Marketing site</span>
+          <span class="tag">Claude Code</span>
+        </div>
+        <h3 class="card-title">Radr</h3>
+        <p class="card-desc">
+          The social calendar for workouts — see what your friends are training, share your schedule, and show up together. Native iOS app on the App Store, plus the marketing site and shareable workout/profile preview pages. Built entirely solo through vibecoding with Claude Code: SwiftUI front end, Supabase backend, Universal Links, push notifications, AASA file — the whole stack.
+        </p>
+        <div class="card-links">
+          <a href="https://getradr.app" target="_blank" rel="noopener" class="link-arrow">getradr.app</a>
+          <a href="https://apps.apple.com/us/app/radr-calendar/id6758311100" target="_blank" rel="noopener" class="link-arrow">App Store</a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <article class="project" data-tilt>
-    <div class="project-media">
-      <a href="https://procarthy.com" target="_blank" rel="noopener">
-        <img src="assets/procarthy.png" alt="Procarthy — partnerships and brand consulting site" loading="lazy" />
-      </a>
-    </div>
-    <div class="project-meta">
-      <div class="project-tags">
-        <span class="tag tag-accent">Website</span>
-        <span class="tag">Claude Code</span>
+    <article class="card" data-card="2">
+      <div class="card-media">
+        <a href="https://procarthy.com" target="_blank" rel="noopener" aria-label="Open Procarthy site">
+          <img src="assets/procarthy.png" alt="Procarthy — partnerships consultancy site" loading="lazy" />
+        </a>
       </div>
-      <h3 class="project-title">Procarthy</h3>
-      <p class="project-desc">
-        Marketing site for Procarthy, the partnerships consultancy. Designed and shipped the brand-forward site to communicate value beyond signage — leveraging athletes, IP, and community to make partnerships actually move the needle for brands.
-      </p>
-      <div class="project-links">
-        <a href="https://procarthy.com" target="_blank" rel="noopener" class="link-arrow">procarthy.com</a>
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-accent">Website</span>
+          <span class="tag">Claude Code</span>
+        </div>
+        <h3 class="card-title">Procarthy</h3>
+        <p class="card-desc">
+          Marketing site for the partnerships consultancy. Designed and shipped the brand-forward site to communicate value beyond signage — leveraging athletes, IP, and community to make partnerships actually move the needle for brands.
+        </p>
+        <div class="card-links">
+          <a href="https://procarthy.com" target="_blank" rel="noopener" class="link-arrow">procarthy.com</a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <article class="project" data-tilt>
-    <div class="project-media">
-      <img src="assets/sideline-assistant.png" alt="Sideline Assistant — AI agent for D3 soccer coaches" loading="lazy" />
-    </div>
-    <div class="project-meta">
-      <div class="project-tags">
-        <span class="tag tag-accent">AI Agent</span>
-        <span class="tag">Soccer · D3</span>
-        <span class="tag">In progress</span>
+    <article class="card" data-card="3">
+      <div class="card-media">
+        <img src="assets/sideline-assistant.png" alt="Sideline Assistant — AI agent for D3 soccer coaches" loading="lazy" />
       </div>
-      <h3 class="project-title">Sideline Assistant</h3>
-      <p class="project-desc">
-        An AI agent built for Division III soccer coaches — pulls every recruiting signal (PDFs, club spreadsheets, microsites, group texts) into one searchable, shared workflow, and helps coaches scout, match, and compete. Designed around what I learned as a 2x All-American and Middlebury captain: D3 recruiting lives in twelve places, and no one has time to chase it. The agent does.
-      </p>
-      <div class="project-links">
-        <span class="link-muted">Private beta — case study available on request</span>
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-accent">AI Agent</span>
+          <span class="tag">Soccer · D3</span>
+          <span class="tag">In progress</span>
+        </div>
+        <h3 class="card-title">Sideline Assistant</h3>
+        <p class="card-desc">
+          An AI agent built for Division III soccer coaches — pulls every recruiting signal (PDFs, club spreadsheets, microsites, group texts) into one searchable, shared workflow, and helps coaches scout, match, and compete. Designed around what I learned as a 2x All-American and Middlebury captain: D3 recruiting lives in twelve places, and no one has time to chase it. The agent does.
+        </p>
+        <div class="card-links">
+          <span class="link-muted">Private beta — case study on request</span>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <article class="project" data-tilt>
-    <div class="project-media project-gallery">
-      <img src="assets/swoosh-1.png" alt="Swoosh Club deck — section 1" loading="lazy" />
-      <img src="assets/swoosh-2.png" alt="Swoosh Club deck — section 2" loading="lazy" />
-      <img src="assets/swoosh-3.png" alt="Swoosh Club deck — section 3" loading="lazy" />
-      <img src="assets/swoosh-4.png" alt="Swoosh Club deck — section 4" loading="lazy" />
-    </div>
-    <div class="project-meta">
-      <div class="project-tags">
-        <span class="tag tag-accent">Brand pitch</span>
-        <span class="tag">Nike</span>
-        <span class="tag">Concept</span>
+    <article class="card" data-card="4">
+      <div class="card-media card-gallery">
+        <img src="assets/swoosh-1.png" alt="Swoosh Club deck — section 1" loading="lazy" />
+        <img src="assets/swoosh-2.png" alt="Swoosh Club deck — section 2" loading="lazy" />
+        <img src="assets/swoosh-3.png" alt="Swoosh Club deck — section 3" loading="lazy" />
+        <img src="assets/swoosh-4.png" alt="Swoosh Club deck — section 4" loading="lazy" />
       </div>
-      <h3 class="project-title">Swoosh Club — Nike pitch</h3>
-      <p class="project-desc">
-        A run-club concept and brand pitch for Nike, presented as an interactive web deck instead of a static PDF. Member-first community model, IP integrated with athletes and culture, and a partnership architecture designed to deliver measurable value back to the brand.
-      </p>
-      <div class="project-links">
-        <span class="link-muted">Private deck — full walkthrough available on request</span>
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-accent">Brand pitch</span>
+          <span class="tag">Nike</span>
+          <span class="tag">Concept</span>
+        </div>
+        <h3 class="card-title">Swoosh Club — Nike pitch</h3>
+        <p class="card-desc">
+          A run-club concept and brand pitch for Nike, presented as an interactive web deck instead of a static PDF. Member-first community model, IP integrated with athletes and culture, and a partnership architecture designed to deliver measurable value back to the brand.
+        </p>
+        <div class="card-links">
+          <span class="link-muted">Private deck — full walkthrough on request</span>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <article class="project" data-tilt>
-    <div class="project-media">
-      <img src="assets/d1-web-design.png" alt="D1 Web Design — boutique sports-focused web design studio" loading="lazy" />
-    </div>
-    <div class="project-meta">
-      <div class="project-tags">
-        <span class="tag tag-accent">Studio site</span>
-        <span class="tag">Claude Code</span>
+    <article class="card" data-card="5">
+      <div class="card-media">
+        <a href="https://luke-maddden-d1.vercel.app/" target="_blank" rel="noopener" aria-label="Open D1 Web Design site">
+          <img src="assets/d1-web-design.png" alt="D1 Web Design — boutique sports-focused web design studio" loading="lazy" />
+        </a>
       </div>
-      <h3 class="project-title">D1 Web Design</h3>
-      <p class="project-desc">
-        Studio site for a boutique web-design practice serving athlete-led brands and small sports businesses. Designed and built end-to-end — typography, motion, copy, and a portfolio shelf that lets prospects self-qualify before the first call.
-      </p>
-      <div class="project-links">
-        <a href="https://luke-maddden-d1.vercel.app/" target="_blank" rel="noopener" class="link-arrow">luke-maddden-d1.vercel.app</a>
+      <div class="card-meta">
+        <div class="card-tags">
+          <span class="tag tag-accent">Studio site</span>
+          <span class="tag">Claude Code</span>
+        </div>
+        <h3 class="card-title">D1 Web Design</h3>
+        <p class="card-desc">
+          Studio site for a boutique web-design practice serving athlete-led brands and small sports businesses. Designed and built end-to-end — typography, motion, copy, and a portfolio shelf that lets prospects self-qualify before the first call.
+        </p>
+        <div class="card-links">
+          <a href="https://luke-maddden-d1.vercel.app/" target="_blank" rel="noopener" class="link-arrow">luke-maddden-d1.vercel.app</a>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </div>
+
+  <div class="rail-controls">
+    <button class="rail-btn" id="railPrev" aria-label="Previous project">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <span class="rail-counter" id="railCounter">01 / 05</span>
+    <button class="rail-btn" id="railNext" aria-label="Next project">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
 </section>
 
 <section class="about" id="about">
