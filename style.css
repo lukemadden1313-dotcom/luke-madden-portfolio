@@ -249,7 +249,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .work-rail::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 .card {
-  flex: 0 0 min(82vw, 920px);
+  flex: 0 0 min(420px, 86vw);
   scroll-snap-align: start;
   display: grid;
   grid-template-rows: auto auto;
@@ -273,29 +273,21 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
 }
+/* Radr card: portrait phone-screen cover crops to headline + phone top */
 .card-media--portrait {
-  aspect-ratio: 9 / 14;
-  background: linear-gradient(180deg, #5fbfff 0%, #2da6ff 100%);
+  aspect-ratio: 9 / 13;
+  background: #eaf3ff;
 }
-.card-media--portrait > a,
-.card-media--portrait > img,
-.card-media--portrait a img {
-  object-fit: contain !important;
-  background: transparent;
+.card-media--portrait img {
+  object-fit: cover;
+  object-position: 50% 18%;
 }
 
-/* D1 card: image fills tighter — locked at the hover scale */
-.card-media--zoom {
-  background: #fff;
-}
-.card-media--zoom img {
+/* D1 card: full-page screenshot — anchor crop to top so the hero shows */
+.card-media--top img {
   object-fit: cover;
   object-position: top center;
-  transform: scale(1.06);
-  transform-origin: top center;
-  transition: transform 700ms var(--ease);
 }
-.card:hover .card-media--zoom img { transform: scale(1.06); }
 .card-media a, .card-media > img {
   display: block;
   width: 100%;
@@ -324,10 +316,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .card-gallery img:hover { transform: scale(1.04); z-index: 2; }
 
 .card-meta {
-  padding: clamp(24px, 3vw, 40px);
+  padding: 24px 24px 26px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .card-tags {
   display: flex;
@@ -356,17 +348,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .card-title {
   font-family: 'Instrument Serif', serif;
   font-weight: 400;
-  font-size: clamp(36px, 4vw, 56px);
-  letter-spacing: -0.018em;
-  line-height: 1.02;
+  font-size: 32px;
+  letter-spacing: -0.015em;
+  line-height: 1.03;
   margin: 0;
 }
 .card-desc {
   color: var(--ink-soft);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 14.5px;
+  line-height: 1.55;
   margin: 0;
-  max-width: 64ch;
+  max-width: 52ch;
 }
 .card-links {
   display: flex;
@@ -536,8 +528,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* ---------- Mobile ---------- */
 @media (max-width: 880px) {
   .nav-links { gap: 18px; }
-  .card { flex: 0 0 88vw; }
-  .card-media { aspect-ratio: 4 / 3; }
+  .card { flex: 0 0 86vw; }
   .approach-inner { grid-template-columns: 1fr; gap: 40px; }
   .approach-portrait img { max-width: 220px; }
   .footer {
