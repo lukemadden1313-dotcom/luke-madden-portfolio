@@ -3,7 +3,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Reveal-on-scroll for section heads, rail, and content blocks
 const targets = document.querySelectorAll(
-  ".section-head, .work-rail, .rail-controls, .about-grid, .contact-inner"
+  ".section-head, .work-rail, .rail-controls, .approach-inner"
 );
 targets.forEach((el) => el.classList.add("reveal"));
 
