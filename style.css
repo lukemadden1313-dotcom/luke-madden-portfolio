@@ -221,7 +221,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: var(--accent);
 }
 
-/* ---------- Work — horizontal rail ---------- */
+/* ---------- Work: horizontal rail ---------- */
 .work {
   padding: clamp(60px, 8vw, 100px) 0 clamp(40px, 6vw, 80px);
   border-top: 1px solid var(--line-soft);
@@ -261,7 +261,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: transform 500ms var(--ease), border-color 500ms var(--ease), box-shadow 500ms var(--ease);
   box-shadow: var(--shadow-md);
 }
-/* Horizontal cards — wider than tall, image-top at native landscape aspect */
+/* Horizontal cards: wider than tall, image-top at native landscape aspect */
 .card--horizontal {
   flex: 0 0 min(580px, 92vw);
 }
@@ -291,7 +291,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   object-position: 50% 0%;
 }
 
-/* D1 card: full-page screenshot — anchor to top so the hero shows */
+/* D1 card: full-page screenshot, anchor to top so the hero shows */
 .card-media--top img {
   object-fit: cover;
   object-position: top center;
